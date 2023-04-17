@@ -1,0 +1,101 @@
+body {
+  background-color: #31403B;
+  font-family: "Tahoma", sans-serif;
+}
+
+#main-title {
+  margin-top: 2%;
+  margin-left: 5%;
+  font-size: 20px;
+  color: white;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 20px;
+  background-color: #31403B;
+  border: 2px solid white;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav a:hover::before,
+nav a:focus::before,
+nav a.active::before {
+  opacity: 1;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  margin-bottom: 2%;
+  width: 98%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tick {
+  color: white;
+  font-size: 1.5em;
+}
+
+.line {
+  fill: none;
+  stroke: #6c757d;
+  stroke-width: 4px;
+}
+
+#svg-container {
+  margin-left: 5%;
+}
+
+.popup {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 400px;
+  height: 170px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  display: none;
+  border-radius: 12px;
+}
+
+.close {
+  color: gray;
+  font-size: 1.5em;
+  float: right;
+  border: none;
+  background-color: transparent;
+  margin-bottom: 5%;
+}
+
+.close:hover {
+  color: red;
+}

@@ -1,0 +1,92 @@
+body {
+  background-color: #31403B;
+  font-family: "Tahoma", sans-serif;
+}
+
+#main-title {
+  margin-top: 2%;
+  margin-left: 5%;
+  font-size: 20px;
+  color: white;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 20px;
+  background-color: #31403B;
+  border: 2px solid white;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav a:hover::before,
+nav a:focus::before,
+nav a.active::before {
+  opacity: 1;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  margin-bottom: 2%;
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#svg-container {
+  margin-left: 5%;
+}
+
+.vis-container {
+  display: flex;
+}
+
+h4 {
+  color: white;
+}
+
+.dot {
+  margin-right: 10px;
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-el {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#dot-1 {
+  background-color: gray;
+}
+
+#dot-2 {
+  background-color: red;
+}

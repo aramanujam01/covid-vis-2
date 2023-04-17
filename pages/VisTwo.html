@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid-19 Data Vis</title>
+    <link rel="stylesheet" href="./VisTwo.css">
+</head>
+<body>
+  <div id="main">
+    <div id="main-title">
+      <h1> The Geographic Spread </h1>
+    </div>
+    <div class="vis-slider">
+      <div id="svg-container">
+        <div id="tooltip"></div>
+        <svg id="map-svg" width="980px" height="600px">
+        </svg>
+        <svg id="legend" width="200px" height="300px">
+        </svg>
+        <div id="loader" class="loader"></div>
+      </div>
+      <h4> Jan 2020 </h4>
+      <input id="month-slider" type="range" min="1" max="39" value="1" step="1" class="vranger"/>
+      <h4 id="right-label"> Mar 2023</h4>
+    </div>
+  </div>
+  <nav>
+    <a href=".././index.html">Home</a>
+    <a href="./VisOne.html">Visualization 1</a>
+    <a href="./VisTwo.html" class="active">Visualization 2</a>
+    <a href="./VisThree.html">Visualization 3</a>
+  </nav>
+</body>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src=".././js/VisTwo.js"></script>
+</html>

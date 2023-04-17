@@ -1,0 +1,33 @@
+Race,Sex,Age,Hospitilization
+Asian,Female,18 - 49 years,0.015
+Asian,Female,50 - 64 years,0.088
+Asian,Female,0 - 17 years,0.015
+Asian,Female,65+ years,0.308
+Asian,Male,18 - 49 years,0.137
+Asian,Male,50 - 64 years,0.036
+Asian,Male,0 - 17 years,0.018
+Asian,Male,65+ years,0.385
+Black,Female,18 - 49 years,0.07
+Black,Female,50 - 64 years,0.171
+Black,Female,0 - 17 years,0.029
+Black,Female,65+ years,0.387
+Black,Male,18 - 49 years,0.079
+Black,Male,50 - 64 years,0.231
+Black,Male,0 - 17 years,0.031
+Black,Male,65+ years,0.44
+White,Female,18 - 49 years,0.035
+White,Female,50 - 64 years,0.086
+White,Female,0 - 17 years,0.013
+White,Female,65+ years,0.0246
+White,Male,18 - 49 years,0.038
+White,Male,50 - 64 years,0.124
+White,Male,0 - 17 years,0.014
+White,Male,65+ years,0.302
+American Indian/Alaska Native,Female,18 - 49 years,0.071
+American Indian/Alaska Native,Female,50 - 64 years,0.164
+American Indian/Alaska Native,Female,0 - 17 years,0.021
+American Indian/Alaska Native,Female,65+ years,0.304
+American Indian/Alaska Native,Male,18 - 49 years,0.083
+American Indian/Alaska Native,Male,50 - 64 years,0.221
+American Indian/Alaska Native,Male,0 - 17 years,0.024
+American Indian/Alaska Native,Male,65+ years,0.413

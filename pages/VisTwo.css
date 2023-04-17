@@ -1,0 +1,150 @@
+body {
+  background-color: #31403B;
+  font-family: "Tahoma", sans-serif;
+}
+
+#main-title {
+  margin-top: 2%;
+  margin-left: 5%;
+  font-size: 20px;
+  color: white;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 20px;
+  background-color: #31403B;
+  border: 2px solid white;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav a:hover::before,
+nav a:focus::before,
+nav a.active::before {
+  opacity: 1;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  margin-bottom: 2%;
+  width: 98%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#svg-container {
+  margin-left: 5%;
+  width: 960px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.vranger {
+  margin-top: 5%;
+  width: 600px;
+  margin-right: 0%;
+  display: inline-block; 
+  vertical-align: middle;
+}
+
+.legend-title {
+  font-size: large;
+  color: white;
+  font-weight: bold;
+}
+
+.vis-slider {
+  justify-content: flex-start;
+  display: flex;
+  align-items: flex-start;
+}
+
+#loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  display: none;
+  left: calc(50% - 60px); /* Add this line to center the loader horizontally */
+  margin-left: -120px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#right-label {
+  margin-right: 5%;
+}
+
+h4 {
+  color: white;
+}
+
+.month-label {
+  font-size: 18px;
+  text-align: center;
+}
+
+#legend {
+  background-color: rgb(172, 172, 172);
+  border-radius: 12px;
+  border-style: solid;
+  border-color: black;
+}
+
+#tooltip {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 150px;
+  height: 70px;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  display: none;
+  border-radius: 12px;
+}
+
+p {
+  font-size: 0.8em;
+}
