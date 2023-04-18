@@ -28,13 +28,13 @@ d3.csv('.././js/monthly-cases.csv').then(function(dataset) {
   svg.append("g")
       .attr("transform", "translate(0," + (height - margin.bottom) + ")")
       .call(xAxis)
-      .attr("fill", "white")
+      .attr("fill", "#eae9e9")
       .attr("stroke", "none");
 
   svg.append("g")
       .attr("transform", "translate(" + margin.left + ",0)")
       .call(d3.axisLeft(yScale).ticks(3))
-      .attr("fill", "white")
+      .attr("fill", "#eae9e9")
       .attr("stroke", "none");
 
   svg.append("text")
@@ -44,7 +44,7 @@ d3.csv('.././js/monthly-cases.csv').then(function(dataset) {
       .attr("x",0 - (height / 2))
       .attr("dy", "1em")
       .style("text-anchor", "middle")
-      .attr("fill", "white")
+      .attr("fill", "#eae9e9")
       .attr("stroke", "none")
       .attr("color", "white")
       .text("Cases");
@@ -57,15 +57,15 @@ d3.csv('.././js/monthly-cases.csv').then(function(dataset) {
       .datum(dataset)
       .attr("class", "line")
       .attr("d", line)
-      .style("stroke", colorScale(0));
+      .style("stroke", "#809e71");
 
   
   var htmlTable = {
-    3: '<h4> The Trump Administration declares a nationwide emergency and issues an additional travel ban on non-U.S. citizens. </h4><audio controls><source src=".././assets/audio_1.mp3" type="audio/mpeg"></audio>',
-    12: '<h4> U.S. Food and Drug Administration issues an Emergency Use Authorization for Modernas COVID-19 vaccine. </h4><audio controls><source src=".././assets/audio_2.mp3" type="audio/mpeg"></audio>',
-    17: '<h4> Biden announces goal to administer at least one COVID-19 vaccine shot to 70% of American adults by July 4, 2021. </h4><audio controls><source src=".././assets/audio_3.mp3" type="audio/mpeg"></audio>',
-    29: '<h4> U.S. COVID-19 related deaths surpass 1M; Biden issues a proclamation directing that the U.S. flag be flown at half-staff. </h4><audio controls><source src=".././assets/audio_4.mp3" type="audio/mpeg"></audio>',
-    39: '<h4> POTUS signs into law H.J.Res. 7, which terminates the national emergency related to the COVID-19 pandemic.</h4><audio controls><source src=".././assets/audio_5.mp3" type="audio/mpeg"></audio>'
+    3: '<h4 style="color:#2a2725"> The Trump Administration declares a nationwide emergency and issues an additional travel ban on non-U.S. citizens. </h4><audio controls><source src=".././assets/audio_1.mp3" type="audio/mpeg"></audio>',
+    12: '<h4 style="color:#2a2725"> U.S. Food and Drug Administration issues an Emergency Use Authorization for Modernas COVID-19 vaccine. </h4><audio controls><source src=".././assets/audio_2.mp3" type="audio/mpeg"></audio>',
+    17: '<h4 style="color:#2a2725"> Biden announces goal to administer at least one COVID-19 vaccine shot to 70% of American adults by July 4, 2021. </h4><audio controls><source src=".././assets/audio_3.mp3" type="audio/mpeg"></audio>',
+    29: '<h4 style="color:#2a2725"> U.S. COVID-19 related deaths surpass 1M; Biden issues a proclamation directing that the U.S. flag be flown at half-staff. </h4><audio controls><source src=".././assets/audio_4.mp3" type="audio/mpeg"></audio>',
+    39: '<h4 style="color:#2a2725"> POTUS signs into law H.J.Res. 7, which terminates the national emergency related to the COVID-19 pandemic.</h4><audio controls><source src=".././assets/audio_5.mp3" type="audio/mpeg"></audio>'
   }
 
   var activeCircle = null;
@@ -91,7 +91,7 @@ d3.csv('.././js/monthly-cases.csv').then(function(dataset) {
         circle.attr("fill", "white");
         circle.classed("gray", false);
       } else {
-        circle.attr("fill", "gray");
+        circle.attr("fill", "#ff0000");
         circle.classed("gray", true);
       }
       var popup = d3.select(".popup");

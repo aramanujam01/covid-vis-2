@@ -186,7 +186,7 @@ d3.json('.././js/us.json').then(function(geojson) {
       svg.selectAll("path").remove();
       legend.selectAll("text").remove();
 
-      var filteredData = dataset.filter(function(d) {
+      let filteredData = dataset.filter(function(d) {
         return d.Month === currMonth && d.State !== "(Other)";
       });
 
@@ -199,7 +199,10 @@ d3.json('.././js/us.json').then(function(geojson) {
         caseCounts[d.State] = +d.Cases;
       });
 
-      var colorScale = d3.scaleSequential(d3.interpolateBlues)
+      console.log(caseCounts);
+
+
+      var colorScale = d3.scaleSequential(d3.interpolateReds)
         .domain([0, d3.max(Object.values(caseCounts))]);
   
       svg.selectAll("path")
@@ -217,7 +220,6 @@ d3.json('.././js/us.json').then(function(geojson) {
           .style("stroke", "black")  // set the stroke color to black
           .style("stroke-width", "4")  // set the stroke width to 1px
           .on("mousemove", function(d) {
-            console.log(this.__data__)
             var stateName = this.__data__.properties.NAME;
             var cases = caseCounts[stateName];
             d3.select("#tooltip")
@@ -251,11 +253,13 @@ d3.json('.././js/us.json').then(function(geojson) {
 
       });
 
+      console.log(colorScale.range());
+
       var rectColors = {
         0: {'gray': 'N/A'}, 
-        1: {'rgb(247, 251, 255)': formatCompactNumber(d3.min(Object.values(caseCounts)))},
-        2: {'rgb(128,150,181)': formatCompactNumber(parseInt(d3.mean(Object.values(caseCounts))))},
-        3: {'rgb(8,48,107)': formatCompactNumber(d3.max(Object.values(caseCounts)))}
+        1: {'rgb(255, 245, 240)': formatCompactNumber(d3.min(Object.values(caseCounts)))},
+        2: {'#f4a481': formatCompactNumber(parseInt(d3.mean(Object.values(caseCounts))))},
+        3: {'rgb(103, 0, 13)': formatCompactNumber(d3.max(Object.values(caseCounts)))}
       }
 
       legendGroup.selectAll("rect")
@@ -299,10 +303,10 @@ d3.json('.././js/us.json').then(function(geojson) {
       // Disable slider
       d3.select("#month-slider").property("disabled", true);
       d3.select("#loader").style("display", "block");
-    
       var idx = d3.select("#month-slider").property("value");
+
       currMonth = idxDate[idx];
-    
+      console.log(currMonth, idx);
       // Wait for 1 second
       setTimeout(function() {
         // Enable slider
